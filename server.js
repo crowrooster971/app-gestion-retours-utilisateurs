@@ -38,8 +38,13 @@ app.post('/api/retours', async (req, res) => {
 
 // Route pour obtenir les retours
 app.get('/api/retours', async (req, res) => {
-  const retours = await Retour.find();
-  res.status(200).send(retours);
+  try {
+    const retours = await Retour.find();
+    res.status(200).send(retours);
+  } catch (err) {
+    // En cas d'erreur lors de la récupération des retours, envoyer une réponse d'erreur
+    res.status(500).send({ message: 'Erreur lors de la récupération des retours', error: err });
+  }
 });
 
 app.listen(PORT, () => {
