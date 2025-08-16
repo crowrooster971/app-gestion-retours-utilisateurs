@@ -2,7 +2,7 @@
   "name": "app-gestion-retours-utilisateurs",
   "version": "1.0.0",
   "description": "Une application web simple pour collecter et gérer les retours des utilisateurs sur des produits.",
-  "main": "server.js",
+  "main": "server.js",  // Point d'entrée principal de l'application
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
