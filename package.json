@@ -16,5 +16,6 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Votre Nom <votre.email@example.com>"
 }
