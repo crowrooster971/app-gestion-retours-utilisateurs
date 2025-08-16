@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gestion des Retours Utilisateurs</title>
+</head>
+<body>
+    <h1>Bienvenue sur l'Application de Gestion des Retours Utilisateurs</h1>
+    <form id="formRetour">
+        <label for="produit">Produit:</label>
+        <input type="text" id="produit" required>
+        <label for="commentaire">Commentaire:</label>
+        <textarea id="commentaire" required></textarea>
+        <label for="note">Note (1 à 5):</label>
+        <input type="number" id="note" min="1" max="5" required>
+        <label for="sentiment">Sentiment:</label>
+        <select id="sentiment" required>
+            <option value="positif">Positif</option>
+            <option value="negatif">Négatif</option>
+            <option value="neutre">Neutre</option>
+        </select>
+        <button type="submit">Soumettre</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
