@@ -27,8 +27,13 @@ const Retour = mongoose.model('Retour', retourSchema);
 app.post('/api/retours', async (req, res) => {
   const { produit, commentaire, note, sentiment } = req.body;
   const nouveauRetour = new Retour({ produit, commentaire, note, sentiment });
-  await nouveauRetour.save();
-  res.status(201).send(nouveauRetour);
+  try {
+    await nouveauRetour.save();
+    res.status(201).send(nouveauRetour);
+  } catch (err) {
+    // En cas d'erreur lors de la sauvegarde, envoyer une réponse d'erreur
+    res.status(500).send({ message: 'Erreur lors de la soumission du retour', error: err });
+  }
 });
 
 // Route pour obtenir les retours
