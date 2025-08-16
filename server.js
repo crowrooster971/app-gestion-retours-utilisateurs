@@ -47,6 +47,7 @@ app.get('/api/retours', async (req, res) => {
   }
 });
 
+// Démarre le serveur sur le port spécifié
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur le port ${PORT}`);
 });
